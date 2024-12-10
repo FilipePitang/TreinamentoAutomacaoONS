@@ -45,9 +45,14 @@ namespace TreinamentoAutomacaoONS
                 Console.WriteLine("\nO livro '{0}' já está na biblioteca.", Titulo);
             }
         }
-        public override void ExibirDetalhes()
+        //public override void ExibirDetalhes()
+        //{
+        //    base.ExibirDetalhes();
+        //    Console.WriteLine(Disponivel ? "O livro ESTÁ disponível para ser emprestado" : "O livro NÃO ESTÁ disponível para ser emprestado");
+        //}
+
+        public override void ExibirDetalhesFilhos()
         {
-            base.ExibirDetalhes();
             Console.WriteLine(Disponivel ? "O livro ESTÁ disponível para ser emprestado" : "O livro NÃO ESTÁ disponível para ser emprestado");
         }
         #endregion Métodos

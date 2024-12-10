@@ -21,9 +21,14 @@ namespace TreinamentoAutomacaoONS
         #endregion Encapsulamento
 
         #region Métodos
-        public override void ExibirDetalhes()
+        //public override void ExibirDetalhes()
+        //{
+        //    base.ExibirDetalhes();
+        //    Console.WriteLine("Edição: {0}", Edicao);
+        //}
+
+        public override void ExibirDetalhesFilhos()
         {
-            base.ExibirDetalhes();
             Console.WriteLine("Edição: {0}", Edicao);
         }
         #endregion Métodos

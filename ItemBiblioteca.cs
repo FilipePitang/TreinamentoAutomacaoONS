@@ -36,7 +36,10 @@ namespace TreinamentoAutomacaoONS
             Console.WriteLine("Título: {0}", Titulo);
             Console.WriteLine("Autor: {0}", Autor);
             Console.WriteLine("Ano de Publicação: {0}", AnoPublicacao);
+            ExibirDetalhesFilhos();
         }
+
+        public abstract void ExibirDetalhesFilhos();
         #endregion Métodos
     }
 }

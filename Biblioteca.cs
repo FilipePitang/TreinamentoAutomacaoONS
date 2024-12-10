@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TreinamentoAutomacaoONS
 {
@@ -40,7 +41,8 @@ namespace TreinamentoAutomacaoONS
         }
         public void BuscarPorTitulo(string titulo)
         {
-            List<ItemBiblioteca> resultados = Itens.FindAll(item => item.Titulo.Equals(titulo, StringComparison.OrdinalIgnoreCase));
+            //List<ItemBiblioteca> resultados = Itens.FindAll(item => item.Titulo.Contains(titulo));
+            List<ItemBiblioteca> resultados = Itens.FindAll(item => item.Titulo.IndexOf(titulo, StringComparison.OrdinalIgnoreCase) >= 0);
 
             if (resultados.Count > 0)
             {
@@ -56,7 +58,8 @@ namespace TreinamentoAutomacaoONS
         }
         public void BuscarPorAutor(string autor)
         {
-            List<ItemBiblioteca> resultados = Itens.FindAll(item => item.Autor.Equals(autor, StringComparison.OrdinalIgnoreCase));
+            //List<ItemBiblioteca> resultados = Itens.FindAll(item => item.Autor.Equals(autor, StringComparison.OrdinalIgnoreCase));
+            List<ItemBiblioteca> resultados = Itens.FindAll(item => item.Autor.IndexOf(autor, StringComparison.OrdinalIgnoreCase) >= 0);
 
             if (resultados.Count > 0)
             {
